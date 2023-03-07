@@ -34,12 +34,16 @@
 // }
 {
   "compilerOptions": {
+    "useDefineForClassFields": true,
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": [
@@ -47,5 +51,17 @@
     ],
     "noEmit": true,
     "isolatedModules": true
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
